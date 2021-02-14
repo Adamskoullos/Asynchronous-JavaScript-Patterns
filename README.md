@@ -44,4 +44,7 @@ The below example completely replaces the XMLHttpRequest above, it contains so l
 
 Lets dive into the error handling:
 
+The if statement on line 7 catches any status errors, in this case the '.catch' on line 19 is triggered. This catches issues such as a broken or incorrect end point.  This is put in place so a more specific error message code can be run regarding response.
+
+If there are any state issues for example a faulty JSON file, an error is traggered and the .catch handles this as normal.
 
