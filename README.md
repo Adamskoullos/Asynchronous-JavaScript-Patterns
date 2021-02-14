@@ -3,8 +3,8 @@
 ### An ongoing quick reference guide for asynchronous code patterns
 
 ### ToC:
-- [XMLHttp Request](##XMLHttp-Request)
-- [Fetch, Promises & Async/Await](##Fetch,-Promises-&-Async/Await)
+[XMLHttp Request](##XMLHttp-Request)<br>
+[Fetch, Promises & Async/Await](##Fetch,-Promises-&-Async/Await)
 
 ## XMLHttp Request
 
