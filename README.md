@@ -24,13 +24,24 @@ If the state is 4 but the status is not 200 then the callback function runs the 
 
 Below the getTodos function expression getTodos is called and in this case the callback function is defined at this point with an arrow function. 
 
+Moving on, I have not included the practical pattern for promises ('then' and 'catch')because promises were built upon with Async/Await and also built into the Fetch API.  For this reason lets go straight to the current best practise as of writing.  
 
-## Fetch & Async/Await
+## Fetch, Promises & Async/Await
 
-The Fetch API returns a promise, this means by using 'then' and 'catch' we can chain promises together, essentially the process works in three stages:
+The below example completely replaces the XMLHttpRequest above, it contains so little code but has so much going on.  First here is the core pattern, below this we will step through the code detailing how it all works. Again this example is sourced from the Net Ninja's Youtube tutorial, link to playlist at the top of the page.
 
-1. Make the request and recieve the JSON response, turn it into data object and return the data object.
-2. Undertake '.then's to execute any code on the returned data object each time returning the output as the input to the next '.then'
-3. Catch any errors with '.catch' and run error code
+![image](https://user-images.githubusercontent.com/73107656/107868885-1741f580-6e80-11eb-8033-f1abd41c3ab6.png)
 
-The below example uses the ES6 Fetch API in conjunction with Async/Await. Lets have a look and then go through it:
+1. On line 3 the getTodos asynchronous function expression is saved to memory.  
+2. The JavaScript thread then moves down to line 17 and getTodos is invoked. 
+3. The JavaScript thread sees that getTodos is an asynchronous function, passes it to the browser and then continiues on down the file.
+4. Meanwhile within the getTodos function:
+    - 'response' is declared and assigned the promise of the returned response. At this point the keyword await stops the function execution thread until the response comes back from the fetch call. 
+    - Once returned the response is checked, if not status 200, throw an error to be caught (explained later)
+    - Declare a variable 'data' and assign it a promise using the await key word. This is necessary as the .json() method returns a promise.  Once returned, 'data' is assigned the object.
+5. Then finally the data object is returned and the execution thread goes to line 18 and executes the .then callback
+6. If for any reason an error occurs during the process the .catch is triggered.
+
+Lets dive into the error handling:
+
+
