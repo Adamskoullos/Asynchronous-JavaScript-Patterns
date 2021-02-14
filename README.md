@@ -26,3 +26,11 @@ Below the getTodos function expression getTodos is called and in this case the c
 
 
 ## Fetch & Async/Await
+
+The Fetch API returns a promise, this means by using 'then' and 'catch' we can chain promises together, essentially the process works in three stages:
+
+1. Make the request and recieve the JSON response, turn it into data object and return the data object.
+2. Undertake '.then's to execute any code on the returned data object each time returning the output as the input to the next '.then'
+3. Catch any errors with '.catch' and run error code
+
+The below example uses the ES6 Fetch API in conjunction with Async/Await. Lets have a look and then go through it:
