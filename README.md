@@ -4,7 +4,7 @@
 
 ### ToC:
 - [XMLHttp Request](##XMLHttp-Request)
-- [Fetch, Promises & Async/Await](##Fetch, Promises & Async/Await)
+- [Fetch, Promises & Async/Await](##Fetch,-Promises-&-Async/Await)
 
 ## XMLHttp Request
 
