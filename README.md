@@ -3,8 +3,8 @@
 ### An ongoing quick reference guide for asynchronous code patterns
 
 ### ToC:
-[XMLHttp Request](##XMLHttp-Request)<br>
-[Fetch, Promises & Async/Await](##Fetch,-Promises-&-Async/Await)
+[XMLHttp Request](#XMLHttp-Request)<br>
+[Fetch, Promises and Async/Await](#Fetch,-Promises-and-Async/Await)
 
 ## XMLHttp Request
 
@@ -26,7 +26,7 @@ Below the getTodos function expression getTodos is called and in this case the c
 
 Moving on, I have not included the practical pattern for promises ('then' and 'catch')because promises were built upon with Async/Await and also built into the Fetch API.  For this reason lets go straight to the current best practise as of writing.  
 
-## Fetch, Promises & Async/Await
+## Fetch, Promises and Async/Await
 
 The below example completely replaces the XMLHttpRequest above, it contains so little code but has so much going on.  First here is the core pattern, below this we will step through the code detailing how it all works. Again this example is sourced from the Net Ninja's Youtube tutorial, link to playlist at the top of the page.
 
